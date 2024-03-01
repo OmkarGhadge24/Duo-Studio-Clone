@@ -1,0 +1,401 @@
+@font-face {
+  font-family: "Mori";
+  src: url("./ppmori.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Mori;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  background-color: #0f0d0d;
+}
+.cursor {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: #edbfff;
+  z-index: 999;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: background-image ease 0.5s;
+  background-position: center;
+  background-size: cover;
+}
+.cursor-active {
+  width: max-content;
+  height: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 4px 10px;
+}
+#overlay{
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    z-index: 99;
+    background-color: #edbfff;
+    opacity: 0;
+    display: none;
+    transition: all ease 1s;
+}
+.page1 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  padding-top: 15vw;
+}
+
+.nav {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  mix-blend-mode: difference;
+  z-index: 102;
+}
+
+.nav img {
+  height: 30px;
+}
+
+.nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.nav-part2 h4 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.nav-part3 .circle {
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.nav-part2 h4:nth-child(1) {
+  border-bottom: 1.2px solid #fff;
+}
+
+.page1 h1 {
+  font-size: 7vw;
+  font-weight: 300;
+  margin-left: 8vw;
+}
+
+.page1 h2 {
+  font-size: 7vw;
+  font-weight: 300;
+  margin-left: 28vw;
+}
+
+.page1 video {
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 8vw;
+}
+
+.page2 {
+  min-height: 70vh;
+  width: 100%;
+  padding: 100px 5vw;
+  border-bottom: 2px solid #6c6c6c66;
+  position: relative;
+  z-index: 9;
+}
+
+.page2 h1 {
+  font-size: 6.5vw;
+  font-weight: 500;
+  color: #111;
+}
+
+.page2-container {
+  height: 60vh;
+  width: 100%;
+  /* background-color: royalblue; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page2-left {
+  width: 36%;
+}
+
+.page2-right {
+  width: 24%;
+}
+
+.page2-left h2 {
+  font-size: 3.5vw;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  line-height: 3.2vw;
+  color: #111;
+}
+
+.page2-right p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #111;
+}
+
+.page2-right button {
+  width: 100%;
+  padding: 4px 0;
+  border-radius: 50px;
+  border: none;
+  background-color: #edbfff;
+  color: #111;
+  margin-top: 20px;
+}
+
+.page3 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  padding-top: 100px;
+  z-index: 9;
+}
+.page3 h1 {
+  color: #111;
+  font-size: 6.5vw;
+  font-weight: 300;
+  margin-left: 90px;
+}
+.page3-part1 #img1 {
+  height: 450px;
+  margin-top: 160px;
+  margin-left: 25px;
+}
+.page3-part1 #img2 {
+  height: 350px;
+  width: 300px;
+  margin: 60px 25px;
+}
+.page3-part1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.page4 {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+  padding: 140px 80px;
+}
+.elem {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.text-div {
+  height: 104px;
+  overflow: hidden;
+}
+.elem h1 {
+  font-size: 7vw;
+  transition: all ease-out 0.5s;
+}
+.elem img {
+  width: 290px;
+  position: absolute;
+  opacity: 0;
+  transition: all ease-out 0.5s;
+  transform: translateY(10%) rotate(3deg);
+  /* z-index: -1; */
+}
+.elem:hover img {
+  opacity: 1;
+  transform: translateY(0%) rotate(0deg);
+}
+.elem:hover h1 {
+  transform: translateY(-100%);
+  color: #edbfff;
+}
+.elem img:nth-child(1) {
+  left: 5%;
+}
+.elem img:nth-child(3) {
+  right: 4.5%;
+}
+.page5 {
+  width: 100%;
+  min-height: 100vh;
+  border-top: 2px solid #6c6c6c;
+  padding: 7vw 5vw;
+  position: relative;
+  z-index: 9;
+}
+
+.page5-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page5-inner > .row {
+  width: 100%;
+  max-width: calc(100vw - 12vw);
+  border-bottom: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8vw 0.3vw;
+  color: rgb(95, 94, 94);
+  cursor: pointer;
+}
+.row:nth-child(1) {
+  padding-right: 1.2vw;
+  color: #fff;
+}
+
+.row > h1 {
+  font-size: 4vw;
+  font-weight: 500;
+}
+
+.row > h1 span:nth-child(1) {
+  color: #edbfff;
+}
+
+.row > h4 {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.row > p {
+  font-size: 1vw;
+  font-weight: 500;
+}
+
+.row > p span:nth-child(1) {
+  margin-right: 6vw;
+}
+.footer{
+    width: 100%;
+    height: 120vh;
+    background-color: #EDBFFF;
+    padding: 7vw 6vw;
+}
+
+.footer> .upper{
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    padding-bottom: 5vw;
+}
+
+.upper> .footer-text{
+    font-size: 1.5vw;
+}
+
+.upper> .circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+
+.lower{
+    height: 60%;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lower .left{
+    width: 35vw;
+}
+
+.lower .left h4{
+    font-size: 1.7vw;
+    font-weight: 400;
+}
+
+.lower .left input{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 50px;
+    font-size: 1.2vw;
+    margin-top: 2.5vw;
+}
+.lower .left input:focus{
+    outline: none;
+}
+
+.lower .left button{
+    width: 8vw;
+    height: 2vw;
+    border-radius: 20px;
+    background-color: transparent;
+    font-size: 1vw;
+    position: relative;
+    left: 27vw;
+    bottom: 3vw;
+    border: 1px solid black;
+}
+
+.lower .left p{
+    margin-top: 1vw;
+}
+
+.lower h1{
+    font-size: 1.7vw;
+    font-weight: 400;
+}
+
+.focus{
+    color: white!important;
+    background-color: #111!important;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
