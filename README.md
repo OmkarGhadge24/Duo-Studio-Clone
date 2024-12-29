@@ -1,36 +1,42 @@
+# [Duo Studio Clone](https://duo-studio-page.netlify.app/)
 
-# Duo Studio Clone
+This is a **frontend clone** of the official Duo Studio website, built using **HTML**, **CSS**, and **JavaScript**. It replicates the visual design and key animations from the original website, providing an experience similar to the earlier version of Duo Studio's site.
 
-Duo Studio Clone is a responsive website inspired by a design agency that creates websites for clients. It showcases portfolio sections, services, and a contact form, demonstrating modern web design and front-end development skills.
+## Table of Contents
 
+- [Overview](#overview)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
 
-## Features
+## Overview
 
-- Loading Animation
-- Fullscreen mode
-- Modern UI : Clean and user-friendly interface.
-- Contact Form : Allows users to reach out for inquiries.
+The goal of this project is to mimic the design and animations of the earlier Duo Studio website. It serves as a practice to enhance skills in web development, focusing on creative animations, modern UI design, and best practices in frontend development.
 
+The project features:
+- Smooth transitions and animations.
+- Fully responsive design.
+- Recreated navigation and interactive elements.
 
-## Tech Stack
+## Technologies Used
 
-- HTML
-- CSS
-- JavaScript
-- Flexbox/Grid for layout
-## Run Locally
+- **HTML5**: For structuring the content.
+- **CSS3**: For styling and animations, including keyframe animations.
+- **JavaScript**: For interactive elements and functionality.
 
-Clone the project
+## Setup and Installation
 
-```bash
-  git clone https://link-to-project
-```
+Follow these steps to get the project running locally:
 
-Go to the project directory
+1. **Clone the project**
 
-```bash
-  cd my-project
-```
+  ```bash
+    git clone https://github.com/OmkarGhadge24/Duo-Studio-Clone.git
+  ```
 
-Open with Live Server
+2. **Go to the project directory**
 
+  ```bash
+    cd my-project
+  ```
+
+3. **Open with Live Server**
