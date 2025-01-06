@@ -1,4 +1,4 @@
-# [Duo Studio Clone](https://duo-studio-page.netlify.app/)
+# Duo Studio Clone
 
 This is a **frontend clone** of the official Duo Studio website, built using **HTML**, **CSS**, and **JavaScript**. It replicates the visual design and key animations from the original website, providing an experience similar to the earlier version of Duo Studio's site.
 
